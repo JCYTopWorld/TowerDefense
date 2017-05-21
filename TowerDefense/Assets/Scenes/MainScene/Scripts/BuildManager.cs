@@ -2,14 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class BuildManager : MonoBehaviour
 {
     public TurretData laserTurretData;
     public TurretData missileTurretData;
     public TurretData standarTurretData;
-    public TurretData selectedTurretData;//表示将要建造的炮台
+    private TurretData selectedTurretData;//表示将要建造的炮台
     public int money = 1000;
+    public Text moneyText;
+
+    void ChangeMoney(int change = 0)
+    {
+        money += change;
+        moneyText.text = "￥" + money;
+    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -28,8 +37,8 @@ public class BuildManager : MonoBehaviour
                         //可以创建
                         if (money > selectedTurretData.cost)
                         {
-                            money -= selectedTurretData.cost;
                             mapCube.BuildTurret(selectedTurretData.turretPrefab);
+                            ChangeMoney(-selectedTurretData.cost);
                         }
                         else
                         {
