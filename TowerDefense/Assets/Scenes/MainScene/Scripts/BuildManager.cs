@@ -12,6 +12,7 @@ public class BuildManager : MonoBehaviour
     private TurretData selectedTurretData;//表示将要建造的炮台
     public int money = 1000;
     public Text moneyText;
+    public Animator moneyAnimator;
 
     void ChangeMoney(int change = 0)
     {
@@ -43,6 +44,7 @@ public class BuildManager : MonoBehaviour
                         else
                         {
                             //钱币不够
+                            moneyAnimator.SetTrigger("Flicker");
                         }
                     }
                     else
