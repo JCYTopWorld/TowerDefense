@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
         {
             index++;
         }
-        if (index>positions .Length -1)
+        if (index > positions.Length - 1)
         {
             ReachDestination();
         }
@@ -43,5 +43,10 @@ public class Enemy : MonoBehaviour
     void OnDestroy()
     {
         EnemySpawner.CountEnemyAlive--;
+    }
+
+    public void TakeDamage(int damage)
+    {
+
     }
 }
