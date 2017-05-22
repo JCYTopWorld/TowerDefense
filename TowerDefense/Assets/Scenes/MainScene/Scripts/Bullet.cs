@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public int damage = 50;
+    public int damage = 30;
     public float speed = 100;
     private Transform target;
     public GameObject explosionEffectPrefab;

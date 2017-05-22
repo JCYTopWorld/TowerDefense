@@ -91,7 +91,7 @@ MonoBehaviour:
   m_MinSize: {x: 911, y: 442}
   m_MaxSize: {x: 22006, y: 10021}
   vertical: 0
-  controlID: 23
+  controlID: 71
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -339,23 +339,23 @@ MonoBehaviour:
     height: 936
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f8050000
+    m_SelectedIDs: 44250000
     m_LastClickedID: 0
     m_ExpandedIDs: e0fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Enemy1(Clone)
+      m_OriginalName: Enemy1(Clone)
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -42466
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 7}
     m_SearchString: 
@@ -434,7 +434,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes/MainScene/Scripts
+    - Assets/Scenes/MainScene/Prefabs/Enemy
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders:
@@ -474,7 +474,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c4240000142500002c2500004e250000602500007c25000084250000ae250000f825000020260000
+    m_ExpandedIDs: 00000000c4240000142500002c2500004e250000602500007c25000084250000ae250000f8250000082600000e26000020260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -632,14 +632,14 @@ MonoBehaviour:
     width: 1194
     height: 470
   m_SceneLighting: 1
-  lastFramingTime: 4977.924897901542
+  lastFramingTime: 778.1884851659603
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -20.497341, y: -3.5190535, z: -30.012268}
+    m_Target: {x: -15.075222, y: 2, z: -18.606453}
     speed: 2
-    m_Value: {x: -20.497341, y: -3.5190535, z: -30.012268}
+    m_Value: {x: -15.075222, y: 2, z: -18.606453}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -662,13 +662,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.3543266, y: -0.48595467, z: 0.22458407, w: -0.76673007}
+    m_Target: {x: -0.2927189, y: -0.23575817, z: 0.07472071, w: -0.92366874}
     speed: 2
-    m_Value: {x: 0.35432658, y: 0.48595464, z: -0.22458407, w: 0.76673007}
+    m_Value: {x: -0.29271692, y: -0.23575659, z: 0.07472021, w: -0.9236626}
   m_Size:
-    m_Target: 38.49257
+    m_Target: 5.7157674
     speed: 2
-    m_Value: 38.49257
+    m_Value: 5.7157674
   m_Ortho:
     m_Target: 0
     speed: 2

@@ -38,7 +38,7 @@ public class Turret : MonoBehaviour
         timer += Time.deltaTime;
         if (enemys.Count > 0 && timer >= attackTateTime)
         {
-            timer -= 0;
+            timer = 0;
             Attack();
         }
     }
