@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scenes\MainScene\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scenes\MainScene\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scenes\MainScene\Scripts\MapCube.cs" />
+    <Compile Include="Assets\Scenes\MainScene\Scripts\Turret.cs" />
     <Compile Include="Assets\Scenes\MainScene\Scripts\TurretData.cs" />
     <Compile Include="Assets\Scenes\MainScene\Scripts\ViewController.cs" />
     <Compile Include="Assets\Scenes\MainScene\Scripts\Wave.cs" />
