@@ -27,6 +27,7 @@ public class Turret : MonoBehaviour
     private float timer = 0;
     public GameObject bulletPrefab;
     public Transform firePosition;
+    public Transform head;
 
     void Start()
     {
@@ -35,6 +36,12 @@ public class Turret : MonoBehaviour
 
     void Update()
     {
+        if (enemys.Count > 0 && enemys[0] != null)
+        {
+            Vector3 targetPosition = enemys[0].transform.position;
+            targetPosition.y = head.position.y;
+            head.LookAt(targetPosition);
+        }
         timer += Time.deltaTime;
         if (enemys.Count > 0 && timer >= attackTateTime)
         {
