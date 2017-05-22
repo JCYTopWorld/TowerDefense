@@ -38,14 +38,38 @@ public class Turret : MonoBehaviour
         timer += Time.deltaTime;
         if (enemys.Count > 0 && timer >= attackTateTime)
         {
-            timer -= attackTateTime;
+            timer -= 0;
             Attack();
         }
     }
 
     private void Attack()
     {
-        GameObject bullet = GameObject.Instantiate(bulletPrefab, firePosition.position, firePosition.rotation);
-        bullet.GetComponent<Bullet>().SetTarget(enemys[0].transform);
+        if (enemys[0] == null) UpdateEnemys();
+        if (enemys.Count > 0)
+        {
+            GameObject bullet = GameObject.Instantiate(bulletPrefab, firePosition.position, firePosition.rotation);
+            bullet.GetComponent<Bullet>().SetTarget(enemys[0].transform);
+        }
+        else
+        {
+            timer = attackTateTime;
+        }
+    }
+
+    void UpdateEnemys()
+    {
+        List<int> emptyIndex = new List<int>();
+        for (int index = 0; index < enemys.Count; index++)
+        {
+            if (enemys[index] == null)
+            {
+                emptyIndex.Add(index);
+            }
+        }
+        for (int i = 0; i < emptyIndex.Count; i++)
+        {
+            enemys.RemoveAt(emptyIndex[i] - i);
+        }
     }
 }
