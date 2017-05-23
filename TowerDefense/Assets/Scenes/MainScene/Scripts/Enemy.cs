@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -11,10 +12,15 @@ public class Enemy : MonoBehaviour
     public float speed = 10;
     public int hp = 150;
     public GameObject explosionEffect;
+    public Slider sliderHp;
+    private int totalHp;
+
     // Use this for initialization
     void Start()
     {
         positions = WayPoints.positions;
+        totalHp = hp;
+        sliderHp = GetComponentInChildren<Slider>();
     }
 
     // Update is called once per frame
@@ -51,6 +57,7 @@ public class Enemy : MonoBehaviour
     {
         if (hp <= 0) return;
         hp -= damage;
+        sliderHp.value = (float)hp / totalHp;
         if (hp <= 0) Die();
     }
 
